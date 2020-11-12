@@ -1,0 +1,101 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/check.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+<h1 class ="heading">Welcome, <%=name %></h1>
+<form action="/check" method="POST">
+  <div class="form-group" style="display: block;" id="1" >
+    <h3>Blood Sugar level : </h3>
+    <div class ="content">
+      
+        <label>
+          <input type="radio" id="yesno" name ="bloodsugarlevel" autocomplete="off" onclick="myFunction(1)" value="normal"> Between 70 to 100-normal 
+        </label>
+      
+      
+        <label>
+          <input type="radio" id="yesno" name ="bloodsugarlevel"autocomplete="off"  onclick="myFunction(1)" value="high"> Greater than 100 - high
+        </label>
+      
+      
+        <label>
+          <input type="radio" id="yesno" name ="bloodsugarlevel"autocomplete="off" onclick="myFunction(1)" value="low"> Lower than 70 - low	 
+        </label>
+      
+    </div>
+  </div>
+  <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_Em3PLH.json" class="ex1" id="2" background="white"  speed="1"  style="width: 200px; height: 50;" loop  autoplay></lottie-player>
+  <div class="form-group" id="3">
+    <h3>Blood Pressure : </h3>
+    <div class ="content">
+      
+        <label>
+          <input type="radio" id="yesno" name ="bloodpressure" autocomplete="off" onclick="myFunction(3)" value="normal">Systolic: between 90 &120 	 Diastolic:between 60 & 80     - normal 
+        </label>
+      
+      
+        <label>
+          <input type="radio" id="yesno" name ="bloodpressure"autocomplete="off"  onclick="myFunction(3)" value="low"> Systolic: leass than 90 	Diastolic: less than 60  - low
+        </label>
+      
+      
+        <label>
+          <input type="radio" id="yesno" name ="bloodpressure"autocomplete="off" onclick="myFunction(3)"  value="high">Systolic: greater than 120  	Diastolic:greater than 80 - high	 
+        </label>
+      
+    </div>
+  </div>
+  <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_Em3PLH.json" class="ex1" id="4" background="white"  speed="1"  style="width: 200px; height: 50;" loop  autoplay></lottie-player>
+  <div class="form-group" id="5">
+    <h3>Heartbeat </h3>
+    <div class ="content">
+      
+        <label>
+          <input type="radio" id="yesno" name ="heartbeat" autocomplete="off"  onclick="myFunction(5)" value="high"> hr less than 100   -     high 
+        </label>
+      
+      
+        <label>
+          <input type="radio" id="yesno" name ="heartbeat"autocomplete="off" onclick="myFunction(5)" value="low"> hr less than 60    -      low
+        </label>
+      
+      
+        <label>
+          <input type="radio" id="yesno" name ="heartbeat"autocomplete="off" onclick="myFunction(5)" value="normal"> hr between 60 and 100 -   normal	 
+        </label>
+      
+    </div>
+  </div>
+  <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_Em3PLH.json" class="ex1" id="6" background="white"  speed="1"  style="width: 200px; height: 50;" loop  autoplay></lottie-player>
+  <div class="form-group" id="7">
+    <h3>Cholesterol </h3>
+    <div class ="content">
+      
+        <label>
+            <input type="radio" id="yesno" name ="cholesterol"autocomplete="off"  onclick="myFunction(7)" value="normal"> LDL less than 100     - normal
+        </label>
+      
+      
+        <label>
+          <input type="radio" id="yesno" name ="cholesterol"autocomplete="off"  onclick="myFunction(7)" value="high"> LDL greater than 100     -    high
+        </label>
+      
+      
+    </div>
+  </div>
+  <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_Em3PLH.json" class="ex1" id="8" background="white"  speed="1"  style="width: 200px; height: 50;" loop  autoplay></lottie-player>
+  <div class="module-wrapper" id="9">
+    <div class="module">
+      <button class="module-button">Evaluate</button>
+    </div>
+  </div>
+</form>
+
+</div>
+</body>
+<script src="js/check.js"></script>
+</html>
+

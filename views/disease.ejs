@@ -1,0 +1,123 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/check.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+<h1 class ="heading">Welcome, <%=name %></h1>
+<form action="/disease" method="POST">
+  <div class="form-group" id="9" style="display: block;">
+    <h3> Chest pain </h3>
+    <div class ="content1">
+      
+        <label>
+          <input type="radio" id="yesno" name ="chestpain" autocomplete="off" value="yes" onclick="myFunction(9)"> Yes
+        </label>
+      
+      
+        <label>
+          <input type="radio" id="yesno" name ="chestpain"autocomplete="off" value="no" onclick="myFunction(9)"> No
+        </label>
+      
+      
+    </div>
+  </div>
+  <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_Em3PLH.json" class="ex1" id="10" background="white"  speed="1"  style="width: 200px; height: 50;" loop  autoplay></lottie-player>
+  <div class="form-group" id="11">
+    <h3> Shortness of breath</h3>
+    <div class ="content1">
+      
+        <label>
+          <input type="radio" id="yesno" name ="shortnessofbreath" autocomplete="off" value="yes" onclick="myFunction(11)"> Yes
+        </label>
+      
+      
+        <label>
+          <input type="radio" id="yesno" name ="shortnessofbreath"autocomplete="off" value="no"  onclick="myFunction(11)"> No
+        </label>
+      
+      
+    </div>
+  </div>
+  <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_Em3PLH.json" class="ex1"id="12" background="white"  speed="1"  style="width: 200px; height: 50;" loop  autoplay></lottie-player>
+  <div class="form-group" id="13">
+    <h3>Fatigue </h3>
+    <div class ="content1">
+      
+        <label>
+          <input type="radio" id="yesno" name ="fatigue" autocomplete="off" value="yes" onclick="myFunction(13)"> Yes
+        </label>
+      
+      
+        <label>
+          <input type="radio" id="yesno" name ="fatigue"autocomplete="off" value="no" onclick="myFunction(13)"> No
+        </label>
+      
+      
+    </div>
+  </div>
+  <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_Em3PLH.json" class="ex1" id="14" background="white"  speed="1"  style="width: 200px; height: 50;" loop  autoplay></lottie-player>
+  <div class="form-group" id="15">
+    <h3>Fainting </h3>
+    <div class ="content1">
+      
+        <label>
+          <input type="radio" id="yesno" name ="fainting" autocomplete="off" value="yes" onclick="myFunction(15)"> Yes
+        </label>
+      
+      
+        <label>
+          <input type="radio" id="yesno" name ="fainting"autocomplete="off"value="no"  onclick="myFunction(15)"> No
+        </label>
+      
+      
+    </div>
+  </div>
+  <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_Em3PLH.json" class="ex1" id="16" background="white"  speed="1"  style="width: 200px; height: 50;" loop  autoplay></lottie-player>
+  <div class="form-group" id="17">
+    <h3>Swelling </h3>
+    <div class ="content1">
+      
+        <label>
+          <input type="radio" id="yesno" name ="swelling" autocomplete="off"value="yes"  onclick="myFunction(17)"> Yes
+        </label>
+      
+      
+        <label>
+          <input type="radio" id="yesno" name ="swelling"autocomplete="off" value="no" onclick="myFunction(17)"> No
+        </label>
+      
+      
+    </div>
+  </div>
+  <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_Em3PLH.json" class="ex1"id="18" background="white"  speed="1"  style="width: 200px; height: 50;" loop  autoplay></lottie-player>
+  <div class="form-group" id="19">
+    <h3>Persistent coughing </h3>
+    <div class ="content1">
+      
+        <label>
+          <input type="radio" id="yesno" name ="persistentcoughing" autocomplete="off" value="yes" onclick="myFunction(19)"> Yes
+        </label>
+      
+      
+        <label>
+          <input type="radio" id="yesno" name ="persistentcoughing"autocomplete="off" value="no" onclick="myFunction(19)"> No
+        </label>
+      
+      
+    </div>
+  </div>
+  <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_Em3PLH.json" class="ex1" id="20" background="white"  speed="1"  style="width: 200px; height: 50;" loop  autoplay></lottie-player>
+  <div class="module-wrapper" id="21">
+    <div class="module">
+      <button class="module-button">Check</button>
+    </div>
+  </div>
+</form>
+
+</div>
+</body>
+<script src="js/check.js"></script>
+</html>
+
