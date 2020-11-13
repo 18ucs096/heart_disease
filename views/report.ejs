@@ -4,34 +4,35 @@
   <link rel="stylesheet" href="./css/last.css">
 </head>
 <body>
-    <h1 class ="heading">Health Risk Result Welcome, <%=name %></h1>   
+    <h1 class ="heading">Health Risk Result </h1>   
     <div class="box">
         <div class="dis">
-            <h3>Disease</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a rhoncus nisi, in sollicitudin magna. Praesent eget enim rutrum, consequat metus ut, vulputate libero.</p>
+            <h3><%=name %>,You may have this disease named :</h3>
+            <p><%=disease %></p>
             </div>
 
     </div>
     <div class="box">
         <div class="dis">
-            <h3>Based on your inputs, ACM advises the following:</h3>
+            <h3>Based on your inputs, Follow the following advices:</h3>
             <ul>
-                <li>
-                    Souvlaki ignitus carborundum e pluribus unum. </li>
-                    <li>Defacto lingo est igpay atinlay. Marquee selectus non provisio incongruous feline nolo contendre. </li>
-                    <li>Quote meon an estimate et non interruptus stadium. </li>
-                    <li>Sic tempus fugit esperanto hiccup estrogen. Glorious baklava ex librus hup hey ad infinitum. </li>
-                    <li>Epsum factorial non deposit quid pro quo hic escorol. </li>
-                
+                <%  var i=0 %>
+                <% for ( i=0;i < treatment.length ; i++){ %>
+                    <li><%=treatment[i].Treatment%> </li>
+                   <%} %>
             </ul>
         </div>            
     </div>
     <div class="box">
         <div class="dis">
             <h3>Your health matters to us.</h3>
-            <p>If you have more questions, call the Doctor's Helpline number here.<img src="./img/phone.svg" alt="call" height="20px" class="call"><a href="tel:555-555-5555">555-555-5555</a></p>
-            
-            </div>
+            <ul>
+            <li> <a href="tel:905798179">Dr.Amish Vora</a> | Noida | 905798179 | amish@apollo.com | Male |</li>
+            <li> <a href="tel:98746520123">Dr.Kavita Kaur</a> | Uttar Pradesh | 98746520123 | kavita@sms.com | Female |</li>
+            <li> <a href="tel:94142778965">Dr.Amit Khandelwal</a> | Jaipur | 94142778965 | amit@aims.com | Male |</li>
+            <p>If you have more questions, call our Emergency Doctor's Helpline number here.<img src="./img/phone.svg" alt="call" height="20px" class="call"><a href="tel:905798178">Dr.Nitin Kumar</a></p>
+            </ul>
+        </div>
 
     </div>
 </body>
