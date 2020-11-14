@@ -58,24 +58,38 @@ router.post('/login', (req, res, next) => {
   })(req, res, next);
 });
 
+//Possibility of Heart Disease checking
 router.post('/check',(req,res)=>{
   const{bloodsugarlevel,bloodpressure,heartbeat,cholesterol}=req.body;
+  // if all four parameter is normal then no heart disease can be there
   if(bloodsugarlevel=='normal' && bloodpressure=='normal' && heartbeat=='normal' && cholesterol=='normal'){
-    res.render('report',{name: req.user.name});
+    var treatment=[
+      {Treatment:"Consult physician "},{Treatment:"Do proper Rest"},{Treatment:"Do Meditation"},{Treatment:"Avoid taking too much tension and mental stress"}];
+    res.render("report",{name: req.user.name,disease:"No Heart Disease,there might be something else,Consult physician if you feel same.",treatment:treatment})
   }
   else{
+    //possiblity of heart disease is high
     res.render('disease',{name: req.user.name});
   }
 })
+
+//Checking of type of heart disease is there
 router.post('/disease',(req,res)=>{
   const{chestpain,shortnessofbreath,fatigue,fainting,swelling,persistentcoughing }=req.body;
-  //Algorithm
+  var treatment=[
+    {Treatment:"Consult physician "},{Treatment:"Do proper Rest"},{Treatment:"Do Meditation"},{Treatment:"Avoid taking too much tension and mental stress"}];
+    //if all parameters is normal then no heart disease,might be something else 
+  if(chestpain=='no'&& shortnessofbreath=="no" && fatigue=="no" && fainting=="no" && swelling=="no" && persistentcoughing=="no"){
+    res.render("report",{name: req.user.name,disease:"No Heart Disease,there might be something else,Consult physician if you feel same.",treatment:treatment})
+  }else{
+  //Finding the possiblity of which disease is there.
   var sql=`select * from Disease_Detection`;
-  //data return array of objects.
+  //Fetching of result in Knowledge Base
   database.query(sql,function(err,data,field){
     var result = new Array(data.length);
     
     for(var i=0;i<data.length;i++){
+      //Calculating priority on the basis of Input by user
       var priority=0;
 
       //chestpain
@@ -125,6 +139,7 @@ router.post('/disease',(req,res)=>{
       else{
         priority=priority+(10-data[i].Persistent_coughing);
       }
+
       result[i]=priority;
     }
     var maxpriority=-1;
@@ -135,16 +150,16 @@ router.post('/disease',(req,res)=>{
       }
       maxpriority=Math.max(result[i],maxpriority);
     }
+    // Fetching the Treatment of the Maximum possibilty of disease from knowledge base
     sql= `SELECT Treatment FROM Disease_Treatment where Disease='${data[index].Disease}'`;
     database.query(sql,function(err,treatment,field){
       res.render("report",{name: req.user.name,disease:data[index].Disease,treatment:treatment})
 
     })
-    //res.render("report",{name: req.user.name,disease:data[index].Disease})
 
   })
 
-
+  }
 
 
 
